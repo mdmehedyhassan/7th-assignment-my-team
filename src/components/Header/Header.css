@@ -1,0 +1,11 @@
+.header-background{
+    background-image: url("../../images/cover.jpg");
+    background-size: cover;
+    
+}
+.header-text{
+    font-size: 4em;
+    font-weight: 700;
+    color: rgb(255, 0, 0);
+    text-shadow: 10px 10px 20px rgb(161, 225, 135);
+}

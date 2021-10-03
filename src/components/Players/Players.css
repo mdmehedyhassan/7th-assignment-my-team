@@ -1,0 +1,19 @@
+.player-cart{
+    border-radius: 10px ;
+    border: 1px solid red;
+    margin: 10px;
+    padding: 5px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #D6EEEE;
+  }
