@@ -4,10 +4,9 @@
     margin: 10px;
     padding: 5px;
     box-shadow: 10px 10px 30px gray;
-    color: #09198f;
 }
 .player-cart:hover{
-  box-shadow: 10px 10px 30px black;
+  box-shadow: 10px 10px 30px rgb(235, 133, 223);
 }
 
 table {
@@ -21,5 +20,5 @@ table {
   }
   
   tr:nth-child(even) {
-    background-color: #D6EEEE;
+    background-color: #53caca;
   }

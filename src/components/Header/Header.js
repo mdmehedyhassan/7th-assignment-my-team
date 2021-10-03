@@ -1,14 +1,24 @@
-import React from 'react';
-import './Header.css'
+import React, { useState } from 'react';
+import './Header.css';
+import { ThemeProvider } from 'styled-components';
+import { GlobalStyles, lightTheme, darkTheme } from './themes';
 import { Nav, Navbar } from 'react-bootstrap';
 import image from '../../images/manchester-united.png';
 import Typewriter from 'typewriter-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMoon } from '@fortawesome/free-regular-svg-icons';
 
 const Header = () => {
+    const [theme, setTheme] = useState("light");
+    const [darkMode, setDarkMode] = useState(true);
+
+    const themeToggle = () => {
+        theme === "light" ? setTheme("dark") : setTheme("light");
+    }
     return (
         <div className="p-3">
             <Navbar className="" expand="lg">
-                <Navbar.Brand href="#">Home</Navbar.Brand>
+                <Navbar.Brand href="#" className="navbar-style">Home</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -16,9 +26,16 @@ const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="#action1">Team</Nav.Link>
-                        <Nav.Link href="#action2">About</Nav.Link>
-                        <Nav.Link href="#action3">Contact</Nav.Link>
+                        <Nav.Link className="navbar-style" href="#action1">Team</Nav.Link>
+                        <Nav.Link className="navbar-style"  href="#action2">About</Nav.Link>
+                        <Nav.Link className="navbar-style" href="#action3">Contact</Nav.Link>
+                        <Nav.Link>
+                            <ThemeProvider theme={theme === "dark" ? lightTheme : darkTheme}>
+                                <GlobalStyles />
+                                <button className="btn btn-outline-info" onClick={() => [themeToggle(), setDarkMode(!darkMode)]}> {darkMode ? "light" : "dark"} <FontAwesomeIcon icon={faMoon} /> </button>
+                            </ThemeProvider>
+                        </Nav.Link>
+
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

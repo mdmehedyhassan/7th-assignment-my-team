@@ -28,7 +28,7 @@ const Main = () => {
                 <div className="col-md-4">
                     <h1 className="text-danger">Total Players {cartPlayer.length}</h1>
                     <table>
-                        <tr className="bg-warning">
+                        <tr className="bg-warning text-dark">
                             <th>Name</th>
                             <th>Position</th>
                             <th>Salary</th>
