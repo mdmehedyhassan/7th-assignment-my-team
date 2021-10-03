@@ -1,9 +1,15 @@
 .player-cart{
     border-radius: 10px ;
-    border: 1px solid red;
+    border: 2px solid lightblue;
     margin: 10px;
     padding: 5px;
+    box-shadow: 10px 10px 30px gray;
+    color: #09198f;
 }
+.player-cart:hover{
+  box-shadow: 10px 10px 30px black;
+}
+
 table {
     border-collapse: collapse;
     width: 100%;

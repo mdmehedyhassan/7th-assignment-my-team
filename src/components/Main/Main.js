@@ -8,10 +8,16 @@ const Main = () => {
     const [cartPlayer, setCartPlayer] = useState([]);
     useEffect(() => {
         setPlayers(fakeData);
-    });
+    },[]);
     const handlePlayers = (player) => {
-        const newPlayers = [...cartPlayer, player];
-        setCartPlayer(newPlayers);
+        let item = cartPlayer.indexOf(player);
+        if (item === -1) {
+            const newPlayers = [...cartPlayer, player];
+            setCartPlayer(newPlayers);
+        }
+        if (item !== -1) {
+            alert("This player already have your team!");
+        };
     };
 
     const totalBudget = cartPlayer.reduce((total, sum) => total + sum.salary, 0);
@@ -19,7 +25,7 @@ const Main = () => {
         <div>
             <Header></Header>
             <div className="row d-flex flex-md-row-reverse bd-highlight">
-            <div className="col-md-4">
+                <div className="col-md-4">
                     <h1 className="text-danger">Total Players {cartPlayer.length}</h1>
                     <table>
                         <tr className="bg-warning">
@@ -37,7 +43,7 @@ const Main = () => {
                             ))
                         }
 
-                        <tr className="bg-warning">
+                        <tr className="bg-danger text-light">
                             <td>Total Budget: </td>
                             <td>---</td>
                             <td>${totalBudget}</td>
@@ -56,7 +62,7 @@ const Main = () => {
                         }
                     </div>
                 </div>
-                
+
             </div>
         </div>
     );
