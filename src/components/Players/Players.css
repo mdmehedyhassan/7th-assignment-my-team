@@ -6,7 +6,7 @@
     box-shadow: 10px 10px 30px gray;
 }
 .player-cart:hover{
-  box-shadow: 10px 10px 30px rgb(235, 133, 223);
+  box-shadow: 10px 10px 30px #ff0000;
 }
 
 table {

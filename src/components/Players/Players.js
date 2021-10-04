@@ -1,3 +1,5 @@
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import './Players.css';
 
@@ -10,7 +12,7 @@ const Players = (props) => {
             <p>Country: {country}</p>
             <p>Position: {position}</p>
             <h4>Salary: {salary}</h4>
-            <button onClick={()=> props.handlePlayers(props.player)} className="btn btn-info">Add Players</button>
+            <button onClick={()=> props.handlePlayers(props.player)} className="btn btn-info">Add Players <FontAwesomeIcon icon={faSignInAlt} /></button>
         </div>
     );
 };
