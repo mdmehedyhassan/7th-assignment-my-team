@@ -19,7 +19,7 @@ const Header = () => {
         <div className="p-3">
             <Navbar className="" expand="lg">
                 <Navbar.Brand href="#" className="navbar-style">Home</Navbar.Brand>
-                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Toggle aria-controls="navbarScroll" className="bg-info" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
                         className="ms-auto my-2 my-lg-0"
